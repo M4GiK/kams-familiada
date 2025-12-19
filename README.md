@@ -1,74 +1,118 @@
-Coding Dojo Silesia: Familiada Kata
-===================================
+# Familiada - Polskie wydanie gry Family Feud
 
-Welcome to A'th edition of Coding Dojo Silesia. Your task is to implement a simulation
-of a [polish version of Family Feud TV game show](https://en.wikipedia.org/wiki/Familiada).
-We provided a simple boilerplate in ES with a HTML version of the interface, but you
-can implement your own GUI if you choose too. Just remember, this is a kata, we care about
-quality of your code and value simplicity over complexity.
+Familiada to interaktywna implementacja polskiej wersji gry telewizyjnej Family Feud (Familiada). Gra została napisana w TypeScript z wykorzystaniem nowoczesnych technologii webowych.
 
-Please read the whole description before you start working.
+## 🚀 Funkcje
 
-### The rules
-1. There are two teams, red and blue.
-1. First team to score 300 points wins, we do not implement the finale part.
-1. First team to play the round is chosen at random.
-1. The points in round 4 are doubled. Starting round 5 the points are tripled.
-1. Each round consists of one question, which has several answers.
-1. The answers points vary on their previously surveyed popularity.
-1. You can find the questions and answers in the [data.json](src/data.json) in the src 
-   directory.
+- **Dwie drużyny**: Niebieska i czerwona
+- **System punktacji**: Punkty mnożone w 4. i 5. rundzie
+- **Rozpoznawanie mowy**: Web Speech API (Chrome zalecany)
+- **Undo**: Przywracanie poprzedniego stanu gry (klawisz Z)
+- **Overlay wyników**: Przegląd wyników (klawisz S)
+- **Pytania**: Losowe lub w kolejności z pliku `data.json`
 
-##### The round scenario
-1. The selected team members give their answers to the question.
-1. Each correct answer is uncovered on the board and the points sum is displayed on the
-   board as well.
-1. Each incorrect answer is counted as a mistake and is visible on the page as an X.
-1. If the team guesses all the answer, the whole sum of points is awarded and the round
-   ends.
-1. If the team makes 3 mistakes, the opposite team can give 1 answer.
-   * If the answer is correct, the team steal all the awarded points from the board.
-   * Otherwise, the team that was originally playing the round gets these points.
-   * In both cases the round ends as well.
+## 📦 Instalacja
 
-### The twist
-Just like a live show, the answers will be given vocally, To achieve the a 
-[Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
-will be used. Take note, that this API is only available on Google Chrome
-and Firefox, although we were not able to make it work in Firefox. Using the latest
-stable version of Google Chrome is strongly advised if you want to use this feature.
-Given that we don't want to force you to install a Google software on your machine, 
-this part if the task is serving as a twist for those interested and is not required.
+### Wymagania wstępne
+- Node.js (wersja 16 lub nowsza)
+- npm lub yarn
 
-### The second twist
-As we know in Poland, this TV show cannot exist without some bad jokes ;) Should you
-find yourself with some additional time on your hands, consider throwing some cool
-dry joke at the start of the show using the awesome 
-[random-suchar-generator](https://www.npmjs.com/package/random-suchar-generator)
-written by an awesome member of our community and a mentor 
-[Arek](https://github.com/lazarow).
+### Kroki instalacji
+1. Sklonuj repozytorium:
+   ```bash
+   git clone <repository-url>
+   cd familiada-master
+   ```
 
-Because we're using the browser environment, you'll probably find using the
-[endpoint provided by us](http://suchary.dmazur.usermd.net/) easier to use.
+2. Zainstaluj zależności:
+   ```bash
+   npm install
+   ```
 
-### The manual
-##### Installation
-1. Be sure you have your node.js updated. The use of [n](https://github.com/tj/n) 
-   is advised. Just be sure to restart your terminal, should you change the node version.
-1. `npm install`
-1. `npm start`
+## 🎮 Uruchomienie
 
-##### Entry point
-The main JS is [main.js](src/scripts/main.js) in the `src/scripts` directory.
+### Tryb deweloperski (z hot-reload)
+```bash
+npm start
+```
+Aplikacja będzie dostępna na `http://localhost:3000`
 
-##### Testing
-Existing tests are using [Jest](https://jestjs.io), but you are allowed to
-use any testing framework, as long as you do write the tests ;)
+### Budowa produkcyjna
+```bash
+npm run build
+```
 
-### Credits
-Thank you to [Arek](https://github.com/lazarow) for Web Speech API idea as well as
-the [generator](https://www.npmjs.com/package/random-suchar-generator).  
+### Testy
+```bash
+npm test
+```
 
-Also, huge thanks to everyone involved in making this Dojo a possibility! Mentors, 
-organizers, and all the people discussing topic ideas with us and taking active part
-in our community. You know who you are ;)  
+## 🎯 Jak grać
+
+### Sterowanie klawiszami:
+- **Space**: Uruchom muzykę intro / Ukryj intro
+- **S**: Przełącz overlay wyników (blokuje inne klawisze)
+- **Z**: Cofnij ostatnią akcję (undo)
+- **R**: Rozpocznij rozpoznawanie głosu
+- **E**: Odznacz drużynę
+- **X**: Dodaj błąd dla wybranej drużyny
+- **M**: Przełącz muzykę
+- **Q**: Wybierz drużynę niebieską
+- **W**: Wybierz drużynę czerwoną
+- **P**: Przejdź do następnej rundy
+- **1-9**: Odkryj odpowiedź o danym numerze
+
+### Zasady gry:
+1. Dwie drużyny (niebieska i czerwona) rywalizują o punkty
+2. Pierwsza drużyna, która zdobędzie 300 punktów wygrywa
+3. Każda runda zawiera jedno pytanie z wieloma odpowiedziami
+4. Punkty są mnożone: 2x w rundzie 4, 3x w rundzie 5
+5. 3 błędy powodują przejście do trybu "kradzieży" przez przeciwną drużynę
+
+### Rozpoznawanie mowy:
+- Funkcja opcjonalna, wymaga Google Chrome
+- Naciśnij **R** aby rozpocząć nagrywanie
+- Odpowiedzi są rozpoznawane automatycznie
+
+## 🛠 Technologie
+
+- **TypeScript**: Statyczne typowanie dla lepszej jakości kodu
+- **Webpack**: Budowanie i bundling aplikacji
+- **Jest**: Testy jednostkowe
+- **SCSS/Bootstrap**: Stylizacja
+- **Web Speech API**: Rozpoznawanie mowy
+- **HTML5 Audio**: Efekty dźwiękowe
+
+## 📁 Struktura projektu
+
+```
+src/
+├── scripts/
+│   ├── main.ts           # Punkt wejścia aplikacji
+│   ├── board.ts          # Manipulacja interfejsem
+│   ├── audio.ts          # Obsługa dźwięków
+│   ├── speech.ts         # Rozpoznawanie mowy
+│   ├── teams.ts          # Enum drużyn
+│   ├── roundStatus.ts    # Status rundy
+│   └── model/
+│       ├── game.ts       # Główna logika gry
+│       ├── round.ts      # Zarządzanie rundą
+│       ├── question.ts   # Klasa pytania
+│       ├── answer.ts     # Klasa odpowiedzi
+│       ├── team.ts       # Klasa drużyny
+│       └── questionStore.ts # Przechowywanie pytań
+├── styles/
+│   └── main.scss         # Główne style
+├── data.json             # Pytania i odpowiedzi
+└── index.html            # Główny szablon HTML
+```
+
+## 🤝 Podziękowania
+
+Ogromne podziękowania dla:
+- **[MarcinGladkowski](https://github.com/MarcinGladkowski/familiada)** za inspirację i oryginalną implementację gry Familiada
+
+
+## 📄 Licencja
+
+Ten projekt jest przeznaczony do celów edukacyjnych i rozrywkowych.  

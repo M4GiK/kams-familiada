@@ -1,9 +1,93 @@
-@import 'reset.scss';
+@use 'reset';
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 @font-face {
   font-family: 'Danger on the Motorway';
-  src: url('../../public/assets/fonts/dotm.woff') format('woff2');
+  src: url('/assets/fonts/dotm.woff') format('woff');
+}
+
+.team.active-turn .name {
+  text-decoration: underline;
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #2d3341;
+  z-index: 9999;
+  transition: opacity 400ms ease;
+}
+
+.intro.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.introTitle {
+  font-size: 96px;
+  line-height: 1;
+  color: #c2d785;
+}
+
+.introSubtitle {
+  margin-top: 10px;
+  font-size: 28px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  color: #c2d785;
+}
+
+.scoreOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(45, 51, 65, 0.96);
+  z-index: 9000;
+}
+
+.scoreOverlay.hide {
+  display: none;
+}
+
+.scoreOverlayInner {
+  width: min(1100px, 92vw);
+  text-align: center;
+}
+
+.scoreOverlayTitle {
+  font-size: 72px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.scoreOverlayTeams {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.scoreOverlayTeam {
+  border: 2px solid rgba(194, 215, 133, 0.6);
+  border-radius: 12px;
+  padding: 18px 22px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.scoreOverlayTeamName {
+  font-size: 42px;
+  opacity: 0.9;
+}
+
+.scoreOverlayTeamPoints {
+  font-size: 140px;
+  line-height: 1;
+  margin-top: 10px;
 }
 
 body.familiada {
@@ -11,9 +95,21 @@ body.familiada {
   color: #c2d785;
   font-family: 'Danger on the Motorway', sans-serif;
   font-size: 16px;
+  padding-bottom: 90px;
 
   h1 {
     font-size: 72px;
+  }
+
+  .undoPanel {
+    margin-top: 8px;
+
+    #undoButton {
+      background: transparent;
+      border: 1px solid #c2d785;
+      color: #c2d785;
+      padding: 6px 10px;
+    }
   }
 
   ul li {
@@ -91,3 +187,34 @@ a {
   color: #c2d785;
 }
 
+.legend {
+  font-size: 12px;
+  opacity: 0.85;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.15);
+  color: #c2d785;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footerControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer .recordPanel {
+  margin: 0;
+}
+
+.footer .undoPanel {
+  margin-top: 0;
+}

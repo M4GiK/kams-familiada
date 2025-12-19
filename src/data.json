@@ -1,4 +1,5 @@
 {
+  "random" : false,
   "questions" : {
     "Atrybut świętego Mikołaja?" : [ null, {
       "ans" : "Worek",
@@ -436,8 +437,9 @@
       "lp" : 5,
       "points" : 8
     }, {
-      "ans" : 7,
-      "lp" : 6
+      "ans" : "Babka",
+      "lp" : 6,
+      "points" : 7
     } ],
     "Wymień rodzaje samolotów?" : [ null, {
       "ans" : "Pasazerski",

@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Familiada</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 
 <body class="familiada first-part">
+<div class="intro">
+    <div class="introTitle">FAMILIADA</div>
+    <div class="introSubtitle">starcie oddzialow firmy Kams</div>
+</div>
+<div class="scoreOverlay hide" aria-hidden="true">
+    <div class="scoreOverlayInner">
+        <div class="scoreOverlayTitle">PUNKTY</div>
+        <div class="scoreOverlayTeams">
+            <div class="scoreOverlayTeam scoreOverlayTeam--blue">
+                <div class="scoreOverlayTeamName" data-score-team="blue-name">Niebiescy</div>
+                <div class="scoreOverlayTeamPoints" data-score-team="blue-points">0</div>
+            </div>
+            <div class="scoreOverlayTeam scoreOverlayTeam--red">
+                <div class="scoreOverlayTeamName" data-score-team="red-name">Czerwoni</div>
+                <div class="scoreOverlayTeamPoints" data-score-team="red-points">0</div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-2 text-center blue-team team">
-            <h4 class="name">Phpowcy</h4>
+            <h4 class="name">Opolska</h4>
             <div class="fail">X</div>
             <div class="fail">X</div>
             <div class="fail">X</div>
@@ -53,20 +73,29 @@
                     <span class="points">8</span>
                 </li>
             </ul>
-            <div class="recordPanel">
-                <button id="recordButton" class='notRec'></button>
-                <h4 class="record">Nagraj!</h4>
-            </div>
             <h3 class="winner"></h3>
         </div>
         <div class="col-lg-2 text-center red-team team">
-            <h4 class="name">JavaScriptowcy</h4>
+            <h4 class="name">PILOTOW</h4>
             <div class="fail">X</div>
             <div class="fail">X</div>
             <div class="fail">X</div>
             <h3>SUMA: <span class="team-points">0</span></h3>
         </div>
     </div>
+</div>
+
+<div class="footer">
+    <div class="footerControls">
+        <div class="recordPanel">
+            <button id="recordButton" class='notRec'></button>
+            <h4 class="record">R</h4>
+        </div>
+        <div class="undoPanel">
+            <button id="undoButton" type="button">Cofnij</button>
+        </div>
+    </div>
+    <div class="legend">Q: lewa | W: prawa | E: nikt | R: nagrywaj | X: błąd | Z: cofnij | 1-9: odsłoń | P: następne pytanie | M: muzyka | S: punkty</div>
 </div>
 
 <script src="./assets/scripts/bundle.js"></script>
