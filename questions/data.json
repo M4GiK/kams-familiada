@@ -1,0 +1,86 @@
+{
+  "random": false,
+  "questions": {
+    "Podaj coś, co w święta robimy inaczej niż przez resztę roku": [
+      null,
+      { "ans": "Ubieramy choinkę", "lp": 1, "points": 35 },
+      { "ans": "łamiemy się opłatkiem", "lp": 2, "points": 25 },
+      { "ans": "Jemy inne potrawy", "lp": 3, "points": 20 },
+      { "ans": "Oglądamy świąteczne filmy", "lp": 4, "points": 12 }
+    ],
+    "Podaj coś, co w święta zawsze „znika samo”": [
+      null,
+      { "ans": "Słodycze", "lp": 1, "points": 35 },
+      { "ans": "Pierogi", "lp": 2, "points": 25 },
+      { "ans": "Ciasta", "lp": 3, "points": 20 },
+      { "ans": "Mandarynki", "lp": 4, "points": 12 }
+    ],
+    "Podaj coś, co w święta łatwo zepsuć": [
+      null,
+      { "ans": "Potrawę", "lp": 1, "points": 35 },
+      { "ans": "Nastrój", "lp": 2, "points": 25 },
+      { "ans": "Prezent", "lp": 3, "points": 20 },
+      { "ans": "Ozdoby", "lp": 4, "points": 12 }
+    ],
+    "Podaj coś, co w święta robimy „więcej niż powinniśmy”": [
+      null,
+      { "ans": "Jemy", "lp": 1, "points": 35 },
+      { "ans": "Siedzimy przy stole", "lp": 2, "points": 25 },
+      { "ans": "Oglądamy telewizję", "lp": 3, "points": 20 },
+      { "ans": "Śpimy", "lp": 4, "points": 12 }
+    ],
+    "Podaj, co klienci sprawdzają jako pierwsze?": [
+      null,
+      { "ans": "Cena", "lp": 1, "points": 35 },
+      { "ans": "Rozmiar", "lp": 2, "points": 25 },
+      { "ans": "Dostępność", "lp": 3, "points": 20 },
+      { "ans": "Norma", "lp": 4, "points": 12 }
+    ],
+    "Jakie są najczęstsze pytania od klienta?": [
+      null,
+      { "ans": "Kiedy zamówienie będzie gotowe/wysłane?", "lp": 1, "points": 45 },
+      { "ans": "Rabat", "lp": 2, "points": 30 },
+      { "ans": "Kolor", "lp": 3, "points": 18 }
+    ],
+    "Komu ufasz najbardziej w sprawie dostępności towaru na stanie?": [
+      null,
+      { "ans": "Arturowi", "lp": 1, "points": 35 },
+      { "ans": "Wiesiowi", "lp": 2, "points": 25 },
+      { "ans": "Bogusi", "lp": 3, "points": 20 },
+      { "ans": "Subiektowi", "lp": 4, "points": 12 }
+    ],
+    "Jaka firma najczęściej nawala z dostawą?": [
+      null,
+      { "ans": "URGENT", "lp": 1, "points": 45 },
+      { "ans": "RAW-POL", "lp": 2, "points": 30 },
+      { "ans": "NOWEX", "lp": 3, "points": 18 }
+    ],
+    "Podaj coś, co klienci chcą „od ręki”?": [
+      null,
+      { "ans": "Nadruki", "lp": 1, "points": 50 },
+      { "ans": "Buty 49 rozmiar", "lp": 2, "points": 32 },
+      { "ans": "Połówki", "lp": 3, "points": 13 }
+    ],
+    "Jakie są najczęstsze pytania od klienta? (skrót)": [
+      null,
+      { "ans": "Termin", "lp": 1, "points": 45 },
+      { "ans": "Rabat", "lp": 2, "points": 30 },
+      { "ans": "Kolor", "lp": 3, "points": 18 }
+    ],
+    "Gdzie najcześciej pracowinicy spędzają czas?": [
+      null,
+      { "ans": "Toalecie", "lp": 1, "points": 39 },
+      { "ans": "Piwnicy", "lp": 2, "points": 32 },
+      { "ans": "Chłodni", "lp": 3, "points": 19 },
+      { "ans": "Podwórko ze szczurkami", "lp": 4, "points": 6 }
+    ],
+    "Najpopularniejsze rodzaje kaw": [
+      null,
+      { "ans": "Gejoza", "lp": 1, "points": 30 },
+      { "ans": "Bardzo mocna", "lp": 2, "points": 22 },
+      { "ans": "Normalna", "lp": 3, "points": 18 },
+      { "ans": "Sypana", "lp": 4, "points": 14 },
+      { "ans": "Z ekspresu", "lp": 5, "points": 8 }
+    ]
+  }
+}

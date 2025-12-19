@@ -7,7 +7,7 @@ import TEAMS from './teams';
 import board from './board';
 import speech from './speech';
 import audio from './audio';
-import data from './../data.json';
+import data from '../../questions/data.json';
 import Game from './model/game';
 import Team from './model/team';
 import QuestionStore from './model/questionStore';

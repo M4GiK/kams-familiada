@@ -9,7 +9,7 @@ Familiada to interaktywna implementacja polskiej wersji gry telewizyjnej Family 
 - **Rozpoznawanie mowy**: Web Speech API (Chrome zalecany)
 - **Undo**: Przywracanie poprzedniego stanu gry (klawisz Z)
 - **Overlay wyników**: Przegląd wyników (klawisz S)
-- **Pytania**: Losowe lub w kolejności z pliku `data.json`
+- **Pytania**: Losowe lub w kolejności z pliku `questions/data.json`
 
 ## 📦 Instalacja
 
@@ -103,7 +103,9 @@ src/
 │       └── questionStore.ts # Przechowywanie pytań
 ├── styles/
 │   └── main.scss         # Główne style
-├── data.json             # Pytania i odpowiedzi
+├── questions/            # Dane i narzędzia związane z pytaniami
+│   ├── data.json         # Pytania i odpowiedzi
+│   └── exports/          # Wygenerowane raporty (PDF, CSV itp.)
 └── index.html            # Główny szablon HTML
 ```
 
