@@ -12463,7 +12463,7 @@ h1, h2, h3, h4, h5 {
 
 @font-face {
   font-family: "Danger on the Motorway";
-  src: url("/assets/fonts/dotm.woff") format("woff");
+  src: url("../fonts/dotm.woff") format("woff");
 }
 .team.active-turn .name {
   text-decoration: underline;

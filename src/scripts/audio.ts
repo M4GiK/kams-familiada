@@ -4,13 +4,13 @@
  */
 
 /** Wrong answer sound effect */
-const wrong = new Audio('/assets/sounds/wrong.mp3');
+const wrong = new Audio('assets/sounds/wrong.mp3');
 
 /** Correct answer reveal sound effect */
-const reveal = new Audio('/assets/sounds/reveal.mp3');
+const reveal = new Audio('assets/sounds/reveal.mp3');
 
 /** Intro music track */
-const music = new Audio('/assets/sounds/music.mp3');
+const music = new Audio('assets/sounds/music.mp3');
 
 music.loop = false;
 

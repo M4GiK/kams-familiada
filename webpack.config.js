@@ -7,7 +7,7 @@ module.exports = {
     entry: ['./src/scripts/main.ts', './src/styles/main.scss'],
     output: {
         path: path.resolve(__dirname, 'public'),
-        publicPath: '/',
+        publicPath: './',
         filename: 'assets/scripts/bundle.js',
         clean: false
     },
